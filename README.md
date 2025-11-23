@@ -20,7 +20,7 @@ Este projeto foi construído seguindo as melhores práticas de Engenharia de Sof
 * **Banco de Dados:** PostgreSQL 15+ (com extensão **PostGIS** para dados espaciais)
 * **Segurança:** Spring Security + JWT (JSON Web Tokens)
 * **Documentação:** OpenAPI 3.0 (Swagger UI)
-* **Ferramentas:** Lombok, Maven, Docker (Opcional)
+* **Ferramentas:** Lombok, Maven, Docker
 
 ---
 
