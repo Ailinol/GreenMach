@@ -1,0 +1,25 @@
+package com.example.greenMach.controller;
+
+import com.example.greenMach.Service.CostumerService;
+import com.example.greenMach.dtos.CreateCostumerDTO;
+import com.example.greenMach.model.Customer;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CustomerController
+{
+    @Autowired
+    CostumerService costumerService;
+
+    @PostMapping("/cadastroCustomer")
+    public ResponseEntity<Customer> saveCustomer(@RequestBody @Valid CreateCostumerDTO createCostumerDTO)
+    {
+        return ResponseEntity.status(HttpStatus.CREATED).body(costumerService.saveCostumer(createCostumerDTO));
+    }
+}
